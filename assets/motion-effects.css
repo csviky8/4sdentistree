@@ -1,0 +1,19 @@
+/* Progressive motion: headings, number highlights, and reading progress. */
+@keyframes den-text-arrive{from{opacity:.05;transform:perspective(900px) translateY(18px) rotateX(12deg);}to{opacity:1;transform:perspective(900px) translateY(0) rotateX(0);}}
+@keyframes den-card-arrive{from{opacity:.35;}to{opacity:1;}}
+@keyframes den-gold-flow{0%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+body.den-wordpress .den-text-reveal.den-in-view{animation:den-text-arrive .8s cubic-bezier(.2,.65,.3,1) both;transform-origin:center bottom;}
+body.den-wordpress .den-card-reveal.den-in-view{animation:den-card-arrive .7s ease both;animation-delay:var(--den-stagger,0ms);}
+body.den-wordpress .den-counter-visual{font:inherit;color:inherit;font-variant-numeric:tabular-nums;}
+body.den-wordpress :is(.hero h1 em,.page-hero h1 em){text-shadow:0 2px 1px #b58d3612;}
+@supports(background-clip:text){body.den-wordpress :is(.hero h1 em,.page-hero h1 em){background-image:linear-gradient(110deg,#9a7326 0%,#b58d36 35%,#d1af60 48%,#b58d36 62%,#9a7326 100%);background-size:220% 100%;background-clip:text;-webkit-background-clip:text;color:transparent;animation:den-gold-flow 4s ease 1;}}
+body.den-wordpress:not(.elementor-editor-active) .button{position:relative;isolation:isolate;overflow:hidden;}
+body.den-wordpress:not(.elementor-editor-active) .button::after{content:'';position:absolute;inset:-70% -20%;pointer-events:none;background:linear-gradient(100deg,transparent 35%,#ffffff20 50%,transparent 65%);transform:translateX(-120%);}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){body.den-wordpress:not(.elementor-editor-active) .button:hover::after{transform:translateX(120%);transition:transform .75s ease;}}
+.den-scroll-progress{position:fixed;z-index:500;top:0;left:0;right:0;height:3px;pointer-events:none;}
+.den-scroll-progress>span{display:block;height:100%;background:linear-gradient(90deg,#9b752d,#dbc17e,#9b752d);transform:scaleX(var(--den-progress,0));transform-origin:left;}
+body.admin-bar .den-scroll-progress{top:32px;}
+@media(max-width:782px){body.admin-bar .den-scroll-progress{top:46px;}}
+@media(prefers-reduced-motion:reduce){body.den-wordpress :is(.den-text-reveal,.den-card-reveal,.hero h1 em,.page-hero h1 em){animation:none!important;opacity:1!important;transform:none!important;}body.den-wordpress .button::after,.den-scroll-progress{display:none!important;}}
+@media print{body.den-wordpress :is(.den-text-reveal,.den-card-reveal,.hero h1 em,.page-hero h1 em){animation:none!important;opacity:1!important;transform:none!important;}body.den-wordpress :is(.hero h1 em,.page-hero h1 em){color:#222!important;background:none!important;}.den-scroll-progress{display:none!important;}}body.den-wordpress .banner-stat strong .den-counter-visual{font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit;}
+@media(forced-colors:active){body.den-wordpress :is(.hero h1 em,.page-hero h1 em){color:CanvasText!important;background:none!important;text-shadow:none!important;}.den-scroll-progress{display:none!important;}}

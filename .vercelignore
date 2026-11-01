@@ -1,0 +1,7 @@
+.git/
+.clinic-data/
+.env
+.env.*
+database/
+server.cjs
+BOOKING-SETUP.md

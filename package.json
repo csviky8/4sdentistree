@@ -1,0 +1,9 @@
+{
+  "name": "4s-dentistree-website",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.cjs",
+    "dev": "node server.cjs"
+  }
+}

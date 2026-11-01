@@ -1,0 +1,6 @@
+/* WhatsApp corrections: full captions stay with their own media. */
+.den-wordpress .gallery-item .gallery-caption{display:block!important;white-space:normal!important;overflow:visible!important;-webkit-line-clamp:unset!important;max-height:none!important;line-height:1.65;font-size:12px;padding:16px;}
+.den-wordpress .video-card .video-description{padding:0 24px 24px;margin:0;line-height:1.8;font-size:13px;color:var(--muted);}
+.den-wordpress .video-card h2{font:25px/1.2 var(--serif);padding:22px 24px 10px;}
+.den-wordpress .sleep-study-visual{display:flex;aspect-ratio:1.4;align-items:center;justify-content:center;flex-direction:column;gap:18px;background:var(--ink);color:var(--gold-light);font:20px Georgia,serif;}
+.den-wordpress .sleep-study-visual svg{width:72px;height:72px;}

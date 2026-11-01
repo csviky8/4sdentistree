@@ -1,0 +1,15 @@
+/* Shared dimensional styling for the 4S clinic website. */
+body.den-wordpress:not(.elementor-editor-active) :is(.card,.team-card,.gallery-item,.video-card,.article-aside){box-shadow:0 2px 4px #20291e05,0 12px 28px -20px #17251d50;border-top-color:#fffdf8;}
+body.den-wordpress:not(.elementor-editor-active) :is(.hero-media,.split-media.image-frame){box-shadow:0 28px 55px -38px #17251d80;}
+body.den-wordpress:not(.elementor-editor-active) :is(.contact-panel,.reviews-layout){box-shadow:0 24px 48px -30px #10281f99,inset 0 1px 0 #ffffff25;}
+body.den-wordpress:not(.elementor-editor-active) .banner-stats{box-shadow:0 16px 30px -26px #25372f80,inset 0 1px 0 #fff;}
+body.den-wordpress:not(.elementor-editor-active) .page-hero{background-image:radial-gradient(ellipse at 90% 15%,#b58d3615,transparent 60%);box-shadow:inset 0 -1px 0 #b58d3620;}
+body.den-wordpress:not(.elementor-editor-active) .den-depth-ready{transform:perspective(1100px) rotateX(var(--den-rx,0deg)) rotateY(var(--den-ry,0deg)) translateY(var(--den-lift,0px));transition:transform .32s cubic-bezier(.2,.65,.3,1),box-shadow .32s ease;transform-origin:center;backface-visibility:hidden;}
+body.den-wordpress:not(.elementor-editor-active) .den-depth-ready.den-depth-active{--den-lift:-5px;box-shadow:0 7px 14px -9px #17251d33,0 28px 45px -28px #17251d66;}
+body.den-wordpress:not(.elementor-editor-active) .button{box-shadow:0 3px 0 #18221920,0 7px 14px -12px #17251d66;transition:transform .22s ease,box-shadow .22s ease,background-color .22s ease;}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+body.den-wordpress:not(.elementor-editor-active) .button:hover{transform:translateY(-3px);box-shadow:0 5px 0 #18221918,0 13px 22px -14px #17251d66;}
+body.den-wordpress:not(.elementor-editor-active) .button:active{transform:translateY(0);box-shadow:0 1px 0 #18221920;}
+}
+@media(prefers-reduced-motion:reduce){body.den-wordpress .den-depth-ready,body.den-wordpress .button{transform:none!important;transition:none!important;}}
+@media print{body.den-wordpress .den-depth-ready,body.den-wordpress .button{transform:none!important;box-shadow:none!important;}}body.den-wordpress:not(.elementor-editor-active) main#main{overflow-x:clip;}
